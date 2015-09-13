@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/searchbox_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blue1"
+    android:orientation="horizontal"
+    android:padding="10dip" >
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:layout_alignBottom="@+id/relativeLayout1"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="5dp"
+        android:background="@android:color/transparent"
+        android:ellipsize="none"
+        android:singleLine="true"
+        android:text="Cancel"
+        android:textColor="#fff"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/cancel" >
+
+        <EditText
+            android:id="@+id/search_box"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/edit_text_without_border"
+            android:hint="Search"
+            android:imeOptions="actionDone"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"
+            android:singleLine="true"
+            android:textSize="15dip"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:id="@+id/search_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:padding="10dp"
+            android:src="@drawable/search" />
+
+        <ImageView
+            android:id="@+id/clear_search_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:clickable="true"
+            android:layout_marginLeft="-35dp"
+            android:padding="10dp"
+            android:layout_toRightOf="@+id/search_box"
+            android:src="@drawable/clear"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>
